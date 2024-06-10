@@ -9,13 +9,15 @@
   display: flex;
   gap: 10px;
   overflow-x: scroll;
+  margin-bottom: 30px;
 }
 .card-list::-webkit-scrollbar {
   display: none;
 }
 .card-list img {
-  width: 220px;
+  width: 200px;
   border-radius: 4px;
+
   cursor: pointer;
 }
 .card-list .card {

@@ -19,8 +19,8 @@
 }
 .hero-caption p {
   max-width: 620px;
-  font-size: 15px;
-  margin-bottom: 20px;
+  font-size: 10px;
+  margin-bottom: 5px;
 }
 .hero-btns {
   display: flex;
