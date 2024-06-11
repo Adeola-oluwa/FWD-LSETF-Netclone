@@ -11,6 +11,7 @@ import TitleCards from '../../components/TitleCards/TitleCards'
 const Home = () => {
   return (
     <div className="home">
+
     <Navbar/>
     <div className='hero'>
       <img src='/hero_banner.jpg' alt="" className='banner-img' />

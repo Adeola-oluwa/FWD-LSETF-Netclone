@@ -1,4 +1,6 @@
 
+import React from 'react';
+import Login from './pages/Login/Login';
 import React, { useEffect } from 'react'
 import Home from './pages/Home/Home'
 import { Routes, Route, useNavigate } from 'react-router-dom'
@@ -34,6 +36,7 @@ const App = () => {
 
   return (
     <div>
+     <Login/>
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/Login' element={<Login/>}/>
@@ -41,6 +44,7 @@ const App = () => {
 
       </Routes>
     
+
     </div>
   )
 }
