@@ -14,7 +14,7 @@ const App = () => {
 
   useEffect(()=>{
     onAuthStateChanged(auth, async(user)=>{
-      if(user){
+      if(user){ 
         console.log("Logged In");
         navigate('/')
       }else{
