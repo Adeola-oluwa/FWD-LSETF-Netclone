@@ -5,6 +5,7 @@ import hero_title from '../../assets/hero_title.png'
 import play_icon from '../../assets/play_icon.png'
 import info_icon from '../../assets/info_icon.png'
 import TitleCards from '../../components/TitleCards/TitleCards'
+import Footer from '../../components/Footer/Footer'
 
 
 
@@ -19,8 +20,8 @@ const Home = () => {
         <img src={hero_title} alt="" className='caption-img' />
         <p>Discovering his ties to secret ancient irder, a young man living in modern Istanbul embarks on quest to save the city from an importal enemy.</p>
         <div className="hero-btns">
-          <button className='btn'><img src={play_icon} alt="" />Play</button>
-          <button className='btn dark-btn'><img src={info_icon} alt="" /> More Info</button>
+          <button className='btn-icon'><img src={play_icon} alt="" />Play</button>
+          <button className='btn-icon dark-btn'><img src={info_icon} alt="" /> More Info</button>
         </div>
         <TitleCards/> 
       </div>
@@ -31,6 +32,7 @@ const Home = () => {
     <TitleCards title= {"Upcoming"} category={"upcoming"}/> 
     <TitleCards title= {"Top Pics for You"} category={"now_playing"}/> 
     </div>
+    <Footer/>
     </div>
   )
 }
