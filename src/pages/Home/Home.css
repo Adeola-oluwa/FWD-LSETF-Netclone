@@ -54,8 +54,49 @@ h1 {
   background: #ffffffbf;
 }
 .hero-btns .btn.dark-btn:hover {
-  background: #6d6d6e66;
+  background: #7d7d9766;
 }
 .more-cards {
   padding-left: 6%;
+}
+@media (max-width: 1028px) {
+  .hero-caption .title-cards {
+    /* display: none; */
+  }
+  .hero-btns {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 800px) {
+  .hero-caption {
+    padding-left: 4%;
+  }
+  .caption-img {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+  .hero-caption {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .btn img {
+    width: 20px;
+  }
+  .more-cards {
+    padding-left: 4%;
+  }
+}
+@media (max-width: 500px) {
+  .caption-img {
+    display: none;
+  }
+  .btn img {
+    width: 15px;
+  }
+  .btn {
+    padding: 4px 10px;
+    gap: 5px;
+    font-size: 10px;
+  }
 }
