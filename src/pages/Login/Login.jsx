@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import logo from "../../assets/logo.png";
-import { useState } from "react";
-import { login, signup } from "../../firebase";
+import { login, signup } from "../../firebase"
+import netflix_spinner from "../../assets/netflix_spinner.gif";
 
 const Login = () => {
   const [signState, setSignState] = useState("Sign In");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState("false");
+
+  const togglePasswordVisibility = () => {
+    setPasswordVisible(!passwordVisible);
+  };
+
+
 
   const user_auth = async (event) => {
     event.preventDefault();
-    if (signState === "Sign in") {
+    if (signState=== "Sign in") {
       await Login(email, password);
     } else {
       await signup(name, email, password);
@@ -28,12 +35,10 @@ const Login = () => {
         <div className="login-form">
           <h1 className="sign">{signState}</h1>
           <form>
-            {signState === "Sign Up" ? (
+            {signState==="Sign Up" ? (
               <input
                 value={name}
-                onChange={(e) => {
-                  e.target.value;
-                }}
+                onChange={(e) => {setName(e.target.value)}}
                 type="text"
                 placeholder="Your name"
               />
@@ -48,14 +53,18 @@ const Login = () => {
               type="email"
               placeholder="Email"
             />
-            <input
+            <input type={passwordVisible ? 'text' : 'password'}
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
-              type="password"
+              
               placeholder="Password"
             />
+          <button type="button" onClick={togglePasswordVisibility} className="password-toggle" >
+          <i className={passwordVisible ? 'fas fa-eye' : 'fas fa-eye-slash'}></i>
+          </button>
+
             <button onClick={user_auth} type="submit" className="btn">
               {signState}
             </button>
