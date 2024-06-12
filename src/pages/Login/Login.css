@@ -53,6 +53,9 @@ login-form input::placeholder {
   font-weight: 500;
   margin-top: 20px;
 }
+.btn:hover {
+  cursor: pointer;
+}
 .form-help {
   display: flex;
   align-items: center;
