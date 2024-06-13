@@ -30,3 +30,8 @@
   text-decoration: none;
   color: white;
 }
+@media (max-width: 1028px) {
+  .hero-caption .title-cards {
+    display: none;
+  }
+}
